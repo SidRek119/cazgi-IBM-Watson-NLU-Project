@@ -26,7 +26,8 @@ class App extends React.Component {
     let rows = 1
     let mode = "url"
     //If the input mode is text make it 4 lines
-    if(input_mode === "text"){
+    if(input_mode === "text")
+    {
       mode = "text"
       rows = 4
     }
@@ -49,8 +50,9 @@ class App extends React.Component {
         let output = data.label;
         let color = "white"
         switch(output) {
-          case "positive": color = "black";break;
-          case "negative": color = "black";break;
+          case "positive": color = "green";break;
+          case "negative": color = "red";break;
+          case "neutral": color = "yellow";break;
           default: color = "black";
         }
         output = <div style={{color:color,fontSize:20}}>{output}</div>
